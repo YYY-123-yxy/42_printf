@@ -6,7 +6,7 @@
 #    By: ziyang <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/22 18:23:55 by ziyang            #+#    #+#              #
-#    Updated: 2025/12/25 00:36:54 by ziyang           ###   ########.fr        #
+#    Updated: 2025/12/25 17:11:13 by ziyang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ all:$(NAME)
 $(NAME):$(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o: %.c
+%.o: %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $(INCLUD) $< -o $@
 
 clean:

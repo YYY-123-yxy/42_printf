@@ -6,7 +6,7 @@
 /*   By: ziyang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 15:39:55 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/24 23:28:18 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/25 17:27:37 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putunsigned_u(unsigned int n)
 	i = 0;
 	while (n >= 10)
 	{
-		i += ft_putunsigned_n(n / 10);
+		i += ft_putunsigned_u(n / 10);
 	}
 	c = n % 10 + '0';
 	write(1, &c, 1);

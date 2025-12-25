@@ -6,13 +6,13 @@
 /*   By: ziyang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 18:36:24 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/23 18:45:01 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/25 17:23:31 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(int c)
 {
 	write(1, &c, 1);
 	return (1);
