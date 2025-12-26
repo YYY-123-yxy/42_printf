@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ziyang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ziyang <ziyang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 18:33:56 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/25 18:41:08 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/26 17:44:29 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int	i;
+	int		i;
 
 	i = 0;
-	va_start (args, format);
+	va_start(args, format);
 	while (*format != '\0')
 	{
 		if (*format == '%')

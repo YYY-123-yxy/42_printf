@@ -3,27 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthexa_lower.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ziyang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ziyang <ziyang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 23:28:40 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/25 19:33:28 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/26 17:56:37 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthexa_lower(unsigned long n)
+int	ft_puthexa_lower(unsigned int n)
 {
-	int	i;
-	char	*base;
+	int				i;
+	char			*base;
+	unsigned long	nb;
 
 	i = 0;
+	nb = n;
 	base = "0123456789abcdef";
-	if (n >= 16)
+	if (nb >= 16)
 	{
-		i += ft_puthexa_lower(n / 16);
+		i += ft_puthexa_lower(nb / 16);
 	}
-	write(1, base + (n % 16), 1);
+	write(1, base + (nb % 16), 1);
 	i++;
 	return (i);
 }

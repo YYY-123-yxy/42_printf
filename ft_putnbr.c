@@ -3,41 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ziyang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ziyang <ziyang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 15:28:51 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/25 19:36:12 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/26 17:31:22 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
-int	ft_putnbr(long n)
+int	ft_putnbr(int n)
 {
-	int	i;
+	int		i;
 	char	c;
+	long	nb;
 
+	nb = n;
 	i = 0;
-	if (n < 0)
+	if (nb < 0)
 	{
 		write(1, "-", 1);
-		n = -n;
+		nb = -nb;
 		i++;
 	}
-	if (n >= 10)
+	if (nb >= 10)
 	{
-		i += ft_putnbr(n / 10);
+		i += ft_putnbr(nb / 10);
 	}
-	c = (n % 10) + '0';
-	write (1, &c, 1);
+	c = (nb % 10) + '0';
+	write(1, &c, 1);
 	i++;
 	return (i);
 }
-/*
-int	main(void)
-{
-	long i = -16;
-
-	ft_putnbr(i);
-}
-*/

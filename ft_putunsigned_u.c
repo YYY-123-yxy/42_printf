@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunsigned_u.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ziyang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ziyang <ziyang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 15:39:55 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/25 17:27:37 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/26 17:31:48 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_putunsigned_u(unsigned int n)
 {
-	int	i;
+	int		i;
 	char	c;
 
 	i = 0;
-	while (n >= 10)
+	if (n >= 10)
 	{
 		i += ft_putunsigned_u(n / 10);
 	}

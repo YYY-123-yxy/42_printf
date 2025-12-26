@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_format.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ziyang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ziyang <ziyang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 19:08:13 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/25 17:24:20 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/26 17:03:23 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_format(char signe, va_list args)
 	else if (signe == 's')
 		i += ft_putstr(va_arg(args, char *));
 	else if (signe == 'd' || signe == 'i')
-		i += ft_putnbr(va_arg(args, long));
+		i += ft_putnbr(va_arg(args, int));
 	else if (signe == 'p')
 		i += ft_putptr(va_arg(args, void *));
 	else if (signe == 'u')
