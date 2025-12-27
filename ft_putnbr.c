@@ -6,12 +6,11 @@
 /*   By: ziyang <ziyang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 15:28:51 by ziyang            #+#    #+#             */
-/*   Updated: 2025/12/26 17:31:22 by ziyang           ###   ########.fr       */
+/*   Updated: 2025/12/27 20:41:02 by ziyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_putnbr(int n)
 {
